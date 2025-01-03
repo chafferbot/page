@@ -1,0 +1,136 @@
+/* Загальні стилі */
+.header {
+    background-color: #f8f9fa;
+    padding: 1rem 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Логотип */
+.header-logo img {
+    width: 100px;
+    height: auto;
+}
+
+/* Центр: Навігація */
+.header-nav .nav-list {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-item .nav-link {
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+}
+
+.nav-item.active .nav-link {
+    font-weight: bold;
+    color: #007bff;
+}
+
+/* Бургер-кнопка */
+.mobile-menu-open-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.burger-line {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    border-radius: 2px;
+}
+
+/* Основные стили для мобильного меню! */
+.mobile-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    z-index: 1000;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.mobile-menu.is-open {
+    display: flex;
+    transform: translateX(0);
+}
+
+/* Стили для бургер-кнопки */
+.mobile-menu-open-btn {
+    display: flex;
+    /* Відображення кнопки */
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    /* Тимчасовий червоний колір */
+    z-index: 1000;
+    /* Щоб кнопка була поверх інших елементів */
+    border: none;
+    cursor: pointer;
+}
+
+.burger-line {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+    border-radius: 2px;
+}
+
+/* Пример адаптации для мобильных устройств */
+@media (max-width: 768px) {
+    .header-nav {
+        display: none;
+        /* Скрываем десктопное меню */
+    }
+
+    .mobile-menu {
+        position: absolute;
+        top: 60px;
+        right: 10px;
+    }
+
+    .mobile-menu.open {
+        display: block;
+    }
+}
+
+/* Пример стилей для логотипа */
+.header-logo {
+    display: flex;
+    align-items: center;
+}
+
+.header-logo .logo-img {
+    max-width: 120px;
+    height: auto;
+}
