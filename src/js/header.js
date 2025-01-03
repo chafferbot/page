@@ -1,10 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const currentPath = window.location.pathname;
-    document.querySelectorAll('.nav-item .nav-link').forEach(link => {
-        const item = link.closest('.nav-item');
-        item.classList.toggle(
-            'active',
-            currentPath.endsWith(link.getAttribute('href').substring(1))
-        );
-    });
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const mobileMenuOpenButton = document.querySelector('.mobile-menu-open-btn');
+
+    if (mobileMenu && mobileMenuOpenButton) {
+        console.log('Кнопка знайдена!');
+        mobileMenuOpenButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('is-open');
+        });
+    } else {
+        console.error('Елементів немає!');
+    }
 });

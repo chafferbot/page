@@ -1,33 +1,52 @@
 <header class="header">
     <div class="container">
         <div class="header-container">
+            <!-- Логотип -->
+            <div class="header-logo">
+                <img src="./img/chaffer-logo.jpeg" alt="Logo" class="logo-img">
+            </div>
+
+            <!-- Навігація -->
             <nav class="header-nav">
-                
-                <button
-                    class="mobile-menu-open-btn btn"
-                    type="button"
-                    aria-label="Open mobile menu button"
-                    aria-controls="mobile-menu"
-                >
-                    <svg class="menu-icon" width="32" height="32">
-                        <use href="./img/icons.svg#icon-mobile-menu"></use>
-                    </svg>
-                </button>
                 <ul class="nav-list">
                     <li class="nav-item active">
                         <a class="nav-link" href="./">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./favorites.html"
-                            >Favorites</a
-                        >
+                        <a class="nav-link" href="./favorites.html">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./">Level</a>
                     </li>
                 </ul>
             </nav>
-            <ul class="header-socials socials">
-                <load src="partials/socials.html" />
-            </ul>
+
+            <!-- Бургер-кнопка -->
+            <button class="mobile-menu-open-btn btn" type="button" aria-label="Open mobile menu button"
+                aria-controls="mobile-menu">
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+            </button>
         </div>
     </div>
-    <load src="partials/mobile-menu.html" />
+
+    <!-- Мобільне меню -->
+    <div id="mobile-menu" class="mobile-menu">
+        <ul class="mobile-nav-list">
+            <li class="mobile-nav-item">
+                <a class="mobile-nav-link" href="./login.html">Login/Account</a>
+            </li>
+            <li class="mobile-nav-item">
+                <a class="mobile-nav-link" href="./level.html">Level</a>
+            </li>
+            <li class="mobile-nav-item">
+                <a class="mobile-nav-link" href="./score.html">Score</a>
+            </li>
+        </ul>
+    </div>
 </header>
+
+<script src="./js/header.js" defer></script>
+<script src="./js/menu.js" defer></script>
+<link rel="stylesheet" href="./css/styles.css">
