@@ -1,0 +1,164 @@
+/* Глобальні стилі */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'DM Sans', sans-serif;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+/* Теги */
+.tags span {
+    padding: 5px 10px;
+    display: inline-block;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    border: 1px solid #242424;
+}
+
+.mobile-tags,
+.desktop-tags {
+    display: none;
+}
+
+/* Зображення */
+.hero-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 60px;
+    object-fit: cover;
+}
+
+.small-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Базовий стиль для hero */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+}
+
+.hero-content h2 {
+    font-size: 38px;
+    line-height: 44px;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    margin: 0;
+}
+
+.hero-content p {
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    margin: 0 auto;
+}
+
+.hero-content .highlight {
+    font-style: italic;
+}
+
+/* Адаптивність */
+
+/* MOBILE */
+@media screen and (max-width: 767px) {
+    .hero {
+        padding: 40px 20px;
+    }
+
+    .hero-content h2 {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .hero-content p {
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    .mobile-tags {
+        display: flex;
+        gap: 8px;
+        font-size: 14px;
+        justify-content: center;
+        margin-top: 20px;
+    }
+}
+
+/* TABLET */
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+    .hero {
+        padding: 60px 40px;
+    }
+
+    .hero-content h2 {
+        font-size: 48px;
+        line-height: 56px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .mobile-tags {
+        display: flex;
+        gap: 8px;
+        font-size: 16px;
+        justify-content: center;
+        margin-top: 20px;
+    }
+}
+
+/* DESKTOP */
+@media screen and (min-width: 1440px) {
+    .hero {
+        padding: 80px 60px;
+    }
+
+    .hero-content h2 {
+        font-size: 64px;
+        line-height: 72px;
+    }
+
+    .hero-content p {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .desktop-tags {
+        display: flex;
+        gap: 10px;
+        font-size: 16px;
+        justify-content: flex-end;
+        margin-top: 20px;
+    }
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 60px;
+    object-fit: cover;
+}
