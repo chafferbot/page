@@ -1,79 +1,34 @@
-.section-top {
-    width: 100%;
-    margin: 0 auto;
-    margin-bottom: 20px;
-}
-
-.section-title {
-    font-size: 28px;
-    line-height: 1.357;
-    font-weight: 400;
-    color: var(--color-main-dark);
-    letter-spacing: 0.02em;
-}
-
-.exercises-category {
-    color: var(--color-exmenu-add);
-    font-size: 20px;
-    letter-spacing: -0.02em;
-    line-height: 1;
-    text-transform: capitalize;
-}
-
-.exercises-menu-list {
+/* Gestaltet den Block mit einem quadratischen Rahmen */
+.text-section {
     display: flex;
-    gap: 20px;
+    flex-direction: column;
+    gap: 20px; /* Abstand zwischen den Blöcken */
 }
 
-.exercises-menu-button {
-    background: none;
-    border: none;
-    color: var(--color-exmenu-inact);
-    font-size: 14px;
-    line-height: 1.428;
-    cursor: pointer;
+.text-block {
+    border: 2px solid #09a49afa; /* Rahmen in Blau */
+    padding: 20px;
+    border-radius: 8px; /* Abgerundete Ecken */
+    background-color: #f9f9f9; /* Heller Hintergrund */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Leichter Schatten für den Block */
+    width: 100%; /* Breite auf 100% setzen */
+    height: 300px; /* Höhe auf eine feste Größe setzen */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
-.exercises-menu-button.active {
-    color: var(--color-main-dark);
+.text-block p {
+    font-size: 16px;
+    color: #333;
+    margin-top: 10px;
 }
 
-.exercises-menu-button.active::after {
-    content: '';
+.text-block .clickable {
     display: block;
-    width: 100%;
-    height: 4px;
-    border-radius: 2px;
-    background: var(--color-main-dark);
-    margin-top: 8px;
+    margin-bottom: 10px;
+    font-size: 1.2em;
 }
 
-@media (min-width: 768px) and (max-width: 1440px) {
-    .section-title {
-        font-size: 44px;
-        line-height: 1.09;
-        flex-basis: 100%;
-    }
-
-    .section-top {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
-        row-gap: 32px;
-        margin-bottom: 32px;
-    }
-
-    .exercises-menu-button {
-        font-size: 16px;
-        line-height: 1.5;
-    }
-}
-
-@media (min-width: 1440px) {
-    .section-top {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-}
